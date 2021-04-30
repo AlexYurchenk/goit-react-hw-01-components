@@ -12,10 +12,7 @@ const App = () => {
     <div>
       <FriendsList/>
       <TransactionsList/>
-      <section class="statistics">
-      <h2 class="title">Upload stats</h2>
       <StatisticsList/>
-      </section>
       <Profile
       avatar={socials.avatar}
       name={socials.name}
