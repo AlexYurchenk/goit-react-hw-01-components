@@ -1,21 +1,23 @@
 import React from 'react';
 import FriendsCard from './FriendListCard';
 import styles from './FriendList.module.css';
-import PropTypes from 'prop-types'
+import PropTypes from 'prop-types';
 
-
-const FriendsList = ({friends}) => <ul className={styles.friend__list}>
-    {friends.map((Friend) =>(
-            <FriendsCard
-            key={Friend.id}
-            avatar={Friend.avatar}
-            name={Friend.name}
-            isOnline={Friend.isOnline}
-            />
+const FriendsList = ({ friends }) => (
+  <ul className={styles.friend__list}>
+    {friends.map(Friend => (
+      <li key={Friend.id}>
+        <FriendsCard
+          avatar={Friend.avatar}
+          name={Friend.name}
+          isOnline={Friend.isOnline}
+        />
+      </li>
     ))}
-</ul>;
+  </ul>
+);
 
 FriendsList.propTypes = {
-    data: PropTypes.arrayOf(PropTypes.object)
-  };
+  data: PropTypes.arrayOf(PropTypes.object),
+};
 export default FriendsList;
