@@ -9,7 +9,7 @@ const StatisticsList = ({ title, stats }) => {
       {title && <h2 className={styles.title}>{title}</h2>}
       <ul className={styles.stat__list}>
         {stats.map(Statistic => (
-          <li key={Statistic.id} ClassName={styles.item}>
+          <li key={Statistic.id} className={styles.item}>
             <StatisticCard
               key={Statistic.id}
               label={Statistic.label}
